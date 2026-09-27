@@ -6,6 +6,19 @@ El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1
 y este proyecto se adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
 ---
+## [1.3.0] - 2026-09-27
+
+### Agregado
+- Módulo de gestión de matrículas (CRUD completo).
+- Validación cruzada: el estudiante y el curso deben existir.
+- Validación de no duplicidad: un estudiante no puede tener dos matrículas ACTIVAS en el mismo curso.
+- Validación de formato de fecha (`YYYY-MM-DD`).
+- Validación de estado (`ACTIVA`, `RETIRADA`, `COMPLETADA`).
+- Persistencia en `data/matriculas.json`.
+
+## [1.2.0] - 2026-09-27
+---
+---
 
 ## [1.2.0] - 2026-09-27
 
