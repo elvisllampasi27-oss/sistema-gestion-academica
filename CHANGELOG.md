@@ -4,6 +4,16 @@ Todos los cambios notables de este proyecto se documentan en este archivo.
 
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/),
 y este proyecto se adhiere a [Semantic Versioning](https://semver.org/lang/es/).
+---
+## [1.5.0] - 2026-09-27
+
+### Agregado
+- Módulo de reportes con consultas agregadas.
+- Reporte de promedio por estudiante.
+- Reporte de promedio por curso con listado de calificaciones.
+- Ranking de cursos por número de matrículas.
+- Resumen general del sistema.
+- Integración en menú principal.
 
 ---
 ## [1.4.0] - 2026-09-27
