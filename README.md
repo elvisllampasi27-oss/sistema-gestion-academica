@@ -3,11 +3,11 @@
 [![Java](https://img.shields.io/badge/Java-21-orange.svg)](https://openjdk.org/)
 [![Maven](https://img.shields.io/badge/Maven-3.9+-blue.svg)](https://maven.apache.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.3.0-blue.svg)](https://github.com/elvisllampasi27-oss/sistema-gestion-academica/releases)
+[![Version](https://img.shields.io/badge/version-1.5.0-blue.svg)](https://github.com/elvisllampasi27-oss/sistema-gestion-academica/releases)
 
 Sistema de gestión académica desarrollado como parte del curso **IS-388 Construcción y Evolución de Software** de la **Universidad Nacional de San Cristóbal de Huamanga (UNSCH)**.
 
-El proyecto implementa una **arquitectura de 3 capas** que permite gestionar estudiantes, docentes, cursos y matrículas.
+El proyecto implementa una **arquitectura de 3 capas** que permite gestionar estudiantes, docentes, cursos, matrículas, calificaciones y generar reportes agregados.
 
 ---
 
@@ -28,7 +28,7 @@ El proyecto implementa una **arquitectura de 3 capas** que permite gestionar est
 
 El sistema sigue una **arquitectura de 3 capas** con separación estricta de responsabilidades:
 
-```
+```text
 ┌─────────────────────────────────────┐
 │          PRESENTACIÓN               │  ← Interfaz de usuario (consola)
 │  (EstudianteUI, DocenteUI, ...)     │
@@ -39,9 +39,9 @@ El sistema sigue una **arquitectura de 3 capas** con separación estricta de res
 │      ACCESO A DATOS                 │  ← Persistencia
 │  (Repositories con JSON)            │
 └─────────────────────────────────────┘
-              │
-              ▼
-        data/*.json
+                 │
+                 ▼
+             data/*.json
 ```
 
 | Capa | Responsabilidad | Paquete |
@@ -65,13 +65,15 @@ El sistema sigue una **arquitectura de 3 capas** con separación estricta de res
 
 ## 📁 Estructura del proyecto
 
-```
+```text
 sistema-gestion-academica/
+
 ├── data/                          # Almacenamiento JSON (base de datos)
 │   ├── estudiantes.json
 │   ├── docentes.json
 │   ├── cursos.json
-│   └── matriculas.json
+│   ├── matriculas.json
+│   └── calificaciones.json
 ├── docs/
 │   └── ARQUITECTURA.md            # Documento de diseño N capas
 ├── src/
@@ -112,14 +114,14 @@ O desde IntelliJ IDEA: **Run → Main**
 
 ## 📦 Módulos
 
-| Módulo | Estado | Versión |
+| **Módulo** | **Estado** | **Versión** |
 |---|---|---|
 | Gestión de estudiantes | ✅ Completado | `v1.0.0` |
 | Gestión de docentes | ✅ Completado | `v1.1.1` |
 | Gestión de cursos | ✅ Completado | `v1.2.0` |
 | Gestión de matrículas | ✅ Completado | `v1.3.0` |
-| Gestión de calificaciones | ⏳ Próximamente | — |
-| Reportes | ⏳ Próximamente | — |
+| Gestión de calificaciones | ✅ Completado | `v1.4.0` |
+| Reportes | ✅ Completado | `v1.5.0` |
 
 Cada módulo implementa:
 
@@ -128,12 +130,16 @@ Cada módulo implementa:
 - ✅ Servicio con reglas de negocio
 - ✅ Interfaz de usuario (CRUD)
 
+El módulo de **Reportes** es especial: solo consulta y agrega datos de los demás módulos, sin persistencia propia.
+
 ---
 
 ## 📜 Historial de versiones
 
-| Versión | Fecha | Descripción |
+| **Versión** | **Fecha** | **Descripción** |
 |---|---|---|
+| `v1.5.0` | 2026-09-27 | Módulo de reportes — Sistema completo |
+| `v1.4.0` | 2026-09-27 | Módulo de calificaciones |
 | `v1.3.0` | 2026-09-27 | Módulo de matrículas |
 | `v1.2.0` | 2026-09-27 | Módulo de cursos |
 | `v1.1.1` | 2026-09-27 | Fix del módulo de docentes |
