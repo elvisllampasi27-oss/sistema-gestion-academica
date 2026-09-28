@@ -5,7 +5,7 @@ import pe.edu.unsch.sga.presentacion.CursoUI;
 import pe.edu.unsch.sga.presentacion.DocenteUI;
 import pe.edu.unsch.sga.presentacion.EstudianteUI;
 import pe.edu.unsch.sga.presentacion.MatriculaUI;
-// import pe.edu.unsch.sga.presentacion.ReporteUI;  // TODO: activar al crear Reportes
+import pe.edu.unsch.sga.presentacion.ReporteUI;
 
 import java.util.Scanner;
 
@@ -35,7 +35,7 @@ public class Main {
                 case 3 -> CursoUI.mostrarMenu(sc);
                 case 4 -> MatriculaUI.mostrarMenu(sc);
                 case 5 -> CalificacionUI.mostrarMenu(sc);
-                case 6 -> System.out.println("⏳ Módulo en construcción...");
+                case 6 -> ReporteUI.mostrarMenu(sc);
                 case 0 -> System.out.println("¡Hasta luego!");
                 default -> System.out.println("Opción no válida");
             }
