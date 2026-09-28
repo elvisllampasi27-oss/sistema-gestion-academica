@@ -6,6 +6,18 @@ El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1
 y este proyecto se adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
 ---
+## [1.4.0] - 2026-09-27
+
+### Agregado
+- Módulo de gestión de calificaciones (CRUD completo).
+- Validación cruzada: la matrícula debe existir y estar ACTIVA.
+- Validación de tipo (`PARCIAL`, `FINAL`, `PRACTICA`).
+- Validación de nota entre 0 y 20.
+- Validación de formato de fecha (`YYYY-MM-DD`).
+- Cálculo de promedio de notas por matrícula.
+- Persistencia en `data/calificaciones.json`.
+
+---
 ## [1.3.0] - 2026-09-27
 
 ### Agregado
